@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<HBox spacing="10.0" style="-fx-background-color: #aa9;" xmlns="http://javafx.com/javafx/8.0.171"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample2.Controller">
+    <children>
+        <VBox prefWidth="300.0" spacing="1.0" style="-fx-background-color: #ddc;">
+
+            <children>
+                <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="Sign">
+                    <font>
+                        <Font name="System Bold" size="18.0"/>
+                    </font>
+                </Label>
+
+                <Label text="q (prime)"/>
+                <HBox alignment="CENTER_LEFT" spacing="2.0">
+                    <TextField fx:id="qTF" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS"/>
+                    <CheckBox fx:id="autoq" mnemonicParsing="false" selected="true"/>
+                </HBox>
+
+                <Label text="p (prime , p - 1 mod q == 0)"/>
+                <HBox alignment="CENTER_LEFT" spacing="2.0">
+                    <TextField fx:id="pTF" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS"/>
+                    <CheckBox fx:id="autop" mnemonicParsing="false" selected="true"/>
+                </HBox>
+
+                <Label text="h (1 &lt; h &lt; p - 1)"/>
+                <HBox alignment="CENTER_LEFT" spacing="2.0">
+                    <TextField fx:id="hTF" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS"/>
+                    <CheckBox fx:id="autoh" mnemonicParsing="false" selected="true"/>
+                </HBox>
+
+                <Label text="g (generated)"/>
+                <TextField fx:id="gTF" editable="false"/>
+
+                <Label text="x (0 &lt; x &lt; g)"/>
+                <HBox alignment="CENTER_LEFT" spacing="2.0">
+                    <TextField maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" fx:id="xTF"/>
+                    <CheckBox fx:id="autox" mnemonicParsing="false" selected="true"/>
+                </HBox>
+
+                <Label text="y (generated)"/>
+                <TextField fx:id="yTF" editable="false"/>
+
+                <Label text="k (0 &lt; k &lt; g)"/>
+                <HBox alignment="CENTER_LEFT" spacing="2.0">
+                    <TextField fx:id="kTF" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS"/>
+                    <CheckBox fx:id="autok" mnemonicParsing="false" selected="true"/>
+                </HBox>
+
+                <Label text="r (generated)"/>
+                <TextField fx:id="rTF" editable="false"/>
+
+                <Label text="s (generated)"/>
+                <TextField fx:id="sTF" editable="false"/>
+
+                <Label text="path"/>
+                <TextField fx:id="signPath" editable="false" text="C:\Users\Zahar\Documents\test\text.txt"/>
+
+                <Label text="hash (generated)"/>
+                <TextField fx:id="hashTF" editable="false"/>
+
+                <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#sign" text="Sign">
+                    <VBox.margin>
+                        <Insets top="5.0"/>
+                    </VBox.margin>
+                </Button>
+
+            </children>
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+            </padding>
+        </VBox>
+        <VBox prefWidth="300.0" spacing="1.0" style="-fx-background-color: #ddc;">
+            <children>
+                <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="Check">
+                    <font>
+                        <Font name="System Bold" size="18.0"/>
+                    </font>
+                </Label>
+                <Label text="r"/>
+                <TextField fx:id="rTF0"/>
+
+                <Label text="s"/>
+                <TextField fx:id="sTF0"/>
+
+                <Label text="w (generated)"/>
+                <TextField fx:id="wTF" editable="false"/>
+
+                <Label text="u1 (generated)"/>
+                <TextField fx:id="u1TF" editable="false"/>
+
+                <Label text="u2 (generated)"/>
+                <TextField fx:id="u2TF" editable="false"/>
+
+                <Label text="v (generated)"/>
+                <TextField fx:id="vTF" editable="false"/>
+
+                <Label text="path"/>
+                <TextField fx:id="checkPath" editable="false" text="C:\Users\Zahar\Documents\test\text.txt"/>
+
+                <Label text="hash (generated)"/>
+                <TextField fx:id="hashTF0" editable="false"/>
+
+                <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#check" text="Check">
+                    <VBox.margin>
+                        <Insets top="5.0"/>
+                    </VBox.margin>
+                </Button>
+                <Label fx:id="out" alignment="TOP_CENTER" maxHeight="1.7976931348623157E308"
+                       maxWidth="1.7976931348623157E308">
+                    <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                    </padding>
+                    <VBox.margin>
+                        <Insets top="10.0"/>
+                    </VBox.margin>
+                </Label>
+            </children>
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+            </padding>
+        </VBox>
+    </children>
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+    </padding>
+</HBox>
